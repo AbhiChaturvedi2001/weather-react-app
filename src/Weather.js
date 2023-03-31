@@ -20,6 +20,8 @@ const Weather = ({
     navigator.geolocation.getCurrentPosition(position => {
       const { latitude, longitude } = position.coords;
       setLocation({ latitude, longitude });
+    }, function(error){
+      setLocation({ latitude:27.216982, longitude:77.489517 });
     });
   }, []);
 
